@@ -1,0 +1,28 @@
+.checkout-container {
+    padding: 20px;
+  }
+  
+  .checkout-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary {
+    margin-bottom: 20px;
+  }
+  
+  .order-item {
+    margin-bottom: 10px;
+  }
+  
+  .total-price {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .place-order-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,24 @@
+.header {
+    background-color: #1976d2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-logo {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .header-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  

@@ -1,0 +1,21 @@
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .basket-item-button {
+    padding: 5px 15px;
+    background-color: red;
+    color: white;
+  }
+  
+  .basket-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+  }
+  

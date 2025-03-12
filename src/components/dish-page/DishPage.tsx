@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import axiosApi from "../../axiosApi";
-import { IDish } from "../../types";
-import { Button, CircularProgress, Typography } from "@mui/material";
+import{ useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import axiosApi from '../../axiosApi';
+import { IDish } from '../../types';
+import { Button, CircularProgress, Typography } from '@mui/material';
+import './DishPage.css';
 
 const DishPage = () => {
   const { dishId } = useParams();
@@ -25,19 +26,19 @@ const DishPage = () => {
 
   const deleteDish = async () => {
     await axiosApi.delete(`/dishes/${dishId}.json`);
-    navigate("/");
+    navigate('/');
   };
 
   if (loading) return <CircularProgress />;
-  if (!dish) return <Typography>Блюдо не найдено</Typography>;
+  if (!dish) return <Typography>Dish not found</Typography>;
 
   return (
-    <div>
-      <Typography variant="h4">{dish.name}</Typography>
-      <Typography>{dish.description}</Typography>
-      <Typography>{dish.price} KGS</Typography>
-      <Button variant="contained" color="error" onClick={deleteDish}>
-        Удалить блюдо
+    <div className="dish-details">
+      <Typography variant="h4" className="dish-details-title">{dish.name}</Typography>
+      <Typography className="dish-details-description">{dish.description}</Typography>
+      <Typography className="dish-details-price">{dish.price} KGS</Typography>
+      <Button variant="contained" color="error" onClick={deleteDish} className="dish-delete-button">
+        Delete
       </Button>
     </div>
   );
